@@ -1,21 +1,23 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { createContext } from "react"
+import { Row, Col } from 'react-bootstrap'
+import { FaInstagram, FaFacebookF, FaEnvelope } from 'react-icons/fa'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div id="home">
+    <div id="overlay"></div>
+      <h1>Hummingbird Recording</h1>
+      <h3>Professional Studio in Vicksburg, MS</h3>
+      <Row className="justify-content-center">
+        <a href="#" className='social-icons' target="_blank" ><FaInstagram /></a>
+        <a href="https://www.facebook.com/hummingbirdrecording" target="_blank" className='social-icons' ><FaFacebookF /></a>
+        <a href="#" className='social-icons' target="_blank" ><FaEnvelope /></a>
+      </Row>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 

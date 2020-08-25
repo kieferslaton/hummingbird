@@ -1,10 +1,36 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Hummingbird Recording`,
+    description: `Professional Studio in Vicksburg, MS`,
     author: `@gatsbyjs`,
+    menuLinks: [
+      {
+        name: 'Home', 
+        link: '/'
+      }, 
+      {
+        name: 'Shop', 
+        link: '/shop'
+      }, 
+      {
+        name: 'Book', 
+        link: '/book'
+      }
+    ]
   },
   plugins: [
+    {
+      resolve: `gatsby-source-shopify`, 
+      options: {
+        shopName: process.env.GATSBY_SHOP_NAME, 
+        accessToken: process.env.GATSBY_STOREFRONT_TOKEN
+      }
+    }, 
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
