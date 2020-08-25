@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout isHome={true}>
     <SEO title="Home" />
     <div id="home">
     <div id="overlay"></div>

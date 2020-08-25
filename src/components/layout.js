@@ -13,7 +13,7 @@ import Header from "./header"
 import './layout.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHome }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} />
+      <Header menuLinks={data.site.siteMetadata.menuLinks} isHome={isHome} />
         <main>{children}</main>
     </>
   )

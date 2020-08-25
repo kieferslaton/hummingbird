@@ -8,12 +8,8 @@ import { FaShoppingCart } from 'react-icons/fa'
 import logo from "../images/logo.png"
 import logoBlack from '../images/logo-black.png'
 
-const Header = ({ menuLinks }) => {
+const Header = ({ isHome, menuLinks }) => {
   const [toggled, setToggled] = useState(false)
-
-  const url = typeof window !== 'undefined' ? window.location.href : '';
-  console.log(url)
-  const isHome = url.endsWith('8000') || url.endsWith('/') || url.endsWith('app') || url.endsWith('com')
 
   const handleMobileClick = () => {
     setToggled(!toggled)
