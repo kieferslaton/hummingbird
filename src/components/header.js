@@ -12,6 +12,7 @@ const Header = ({ menuLinks }) => {
   const [toggled, setToggled] = useState(false)
 
   const url = typeof window !== 'undefined' ? window.location.href : '';
+  console.log(url)
   const isHome = url.endsWith('8000') || url.endsWith('/') || url.endsWith('app') || url.endsWith('com')
 
   const handleMobileClick = () => {
