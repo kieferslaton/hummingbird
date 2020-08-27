@@ -20,7 +20,7 @@ const Header = ({ isHome, menuLinks }) => {
   return (
     <Navbar variant="dark" className={`${isHome ? '' : 'dark'} nav`}>
       <Navbar.Brand>
-        <img src={isHome ? logo : logoBlack} style={{ height: 30 }} />
+        <Link to="/"><img src={isHome ? logo : logoBlack} style={{ height: 30 }} /></Link>
       </Navbar.Brand>
       <Navbar.Collapse className="justify-content-end">
         <Nav className="desktop">
