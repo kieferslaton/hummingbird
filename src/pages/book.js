@@ -4,6 +4,7 @@ import * as emailjs from "emailjs-com"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import MapContainer from '../components/Map'
 
 const Book = () => {
   const [form, setForm] = useState({
@@ -69,9 +70,8 @@ const Book = () => {
               <h1 className="header-text">Book</h1>
             </div>
           </Row>
-          <div className={isSubmit ? "d-none" : ""}>
             <Row className="justify-content-center my-5">
-              <Col xs={10} className="text-center" style={{ maxWidth: 600 }}>
+              <Col xs={10} md={6} className={`${isSubmit ? "d-none" : ""} text-center`} style={{ maxWidth: 600 }}>
                 <div style={{ display: "inline-block" }}>
                   <h3 style={{ color: "#292b2c", fontWeight: 300, marginBottom: 20 }}>
                     Start making some great music today.
@@ -148,18 +148,19 @@ const Book = () => {
                   </Form>
                 </div>
               </Col>
-            </Row>
-          </div>
-          <div className={isSubmit ? "" : "d-none"}>
-            <Row className="justify-content-center mt-4">
-              <Col xs={10} className="text-center">
+              <Col xs={10} md={6} className={`${isSubmit ? "" : "d-none"} text-center`}>
                 <h3 style={{ color: "#292b2c", fontWeight: 300 }}>
                   Thanks! We'll be in touch.
                 </h3>
                 <Button variant="outline-dark" onClick={() => setIsSubmit(false)}>Go Back</Button>
               </Col>
-            </Row>
-          </div>
+              <Col className='d-none d-md-block' md={6}>
+                <MapContainer />
+              </Col>
+              </Row>
+              <div className="d-block d-md-none">
+              <MapContainer />
+              </div>
         </Container>
       </div>
     </Layout>
