@@ -45,9 +45,6 @@ const Header = ({ isHome, menuLinks }) => {
           </span>
         </button>
         <Nav className={`nav-overlay ${toggled ? '' : 'collapsed'}`}>
-          <div className="mobile-cart">
-            <Button variant="outline-light"><Link style={{color: 'white'}} to="/cart" className="d-flex justify-content-center align-items-center"> Cart <FaShoppingCart size={20} style={{margin: '0 0.5em'}}/>   {cartCount}</Link></Button>
-          </div>
           <Row className="h-100 d-flex align-items-center justify-content-center m-0 p-0">
             <Col className="text-center m-0 p-0" xs={12}>
             {menuLinks.map(link => (
@@ -55,6 +52,9 @@ const Header = ({ isHome, menuLinks }) => {
               <Link style={{color: 'white'}} to={link.link}>{link.name}</Link>
               </div>
           ))}
+              <div key="cart" className="mobile-link">
+              <Link style={{color: 'white'}} to='/cart'>Cart ({cartCount})</Link>
+              </div>
             </Col>
           </Row>
         </Nav>
