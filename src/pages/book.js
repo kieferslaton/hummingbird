@@ -64,14 +64,14 @@ const Book = () => {
     <Layout>
       <SEO title="Home" />
       <div className="wrapper">
-        <Container className="mw-100 p-0 m-0">
+        <Container className="mw-100 p-0 mb-3">
           <Row className="justify-content-center header w-100 m-0" id="book">
             <div className="overlay d-flex align-items-center justify-content-center">
               <h1 className="header-text">Book</h1>
             </div>
           </Row>
             <Row className="justify-content-center my-5">
-              <Col xs={10} md={6} className={`${isSubmit ? "d-none" : ""} text-center`} style={{ maxWidth: 600 }}>
+              <Col xs={10} md={5} className={`${isSubmit ? "d-none" : ""} text-center`} style={{ maxWidth: 600 }}>
                 <div style={{ display: "inline-block" }}>
                   <h3 style={{ color: "#292b2c", fontWeight: 300, marginBottom: 20 }}>
                     Start making some great music today.
@@ -148,13 +148,13 @@ const Book = () => {
                   </Form>
                 </div>
               </Col>
-              <Col xs={10} md={6} className={`${isSubmit ? "" : "d-none"} text-center`}>
+              <Col xs={10} md={5} className={`${isSubmit ? "" : "d-none"} text-center`}>
                 <h3 style={{ color: "#292b2c", fontWeight: 300 }}>
                   Thanks! We'll be in touch.
                 </h3>
                 <Button variant="outline-dark" onClick={() => setIsSubmit(false)}>Go Back</Button>
               </Col>
-              <Col className='d-none d-md-block' md={6}>
+              <Col className='d-none d-md-block' md={5}>
                 <MapContainer />
               </Col>
               </Row>

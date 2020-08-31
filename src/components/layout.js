@@ -29,10 +29,10 @@ const Layout = ({ children, isHome }) => {
   `)
 
   return (
-    <>
+    <div class='main-wrapper'>
       <Header menuLinks={data.site.siteMetadata.menuLinks} isHome={isHome} />
         <main>{children}</main>
-    </>
+    </div>
   )
 }
 

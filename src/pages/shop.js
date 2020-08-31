@@ -79,7 +79,7 @@ const Shop = () => {
     <Layout>
       <SEO title="Home" />
       <div className="wrapper">
-        <Container className="mw-100 p-0 m-0">
+        <Container className="mw-100 p-0 mb-3">
           <Row className="justify-content-center header w-100 m-0" id="shop">
             <div className="overlay d-flex align-items-center justify-content-center">
               <h1 className="header-text">Shop</h1>
